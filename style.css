@@ -1,18 +1,18 @@
 .intestazione{
-    background-color: blue;
-    color: aquamarine;
+    background-color:pink;
+    color: rgb(176, 127, 255);
     text-align: center;
 
     padding: 16px;
 
     border-style: solid;
-    border-color: red;
+    border-color: rgb(255, 0, 187);
     border-width: 16px;
     border-radius: 30px;
 }
 
 .link-navigazione{
-    color: darkseagreen;
+    color: rgb(165, 143, 188);
     font-weight: bold;
 
 }

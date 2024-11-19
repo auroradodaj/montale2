@@ -1,27 +1,35 @@
 
 
-let contenitore = document.getElementById('contenitore')
-contenitore.style.borderStyle = 'solid'
+for (const element of elementi) {
+    let contenitore = document.getElementById('contenitore')
+    contenitore.style.position= 'relative';
+    
+    let elemento = document.createElement('div')
+    elemento.style.borderStyle = 'solid'
+    elemento.style.width = '90px';
+    elemento.style.height = '120px';
+    elemento.style.textAlign = 'center';
+    elemento.style.position= 'absolute';
+    elemento.style.left= 90 * (element.xpos -1) + 'px' ;
+    elemento.style.top = 120 * (element.ypos-1) + 'px';
+    elemento.style.backgroundColor= '#' + element ['cpk-hex'];
+    
+    let numeroAtomico = document.createElement('p')
+    numeroAtomico.innerText = element.number 
+    elemento.appendChild(numeroAtomico)
+    
+    
+    let simbolo = document.createElement('a')
+    simbolo.innerText = element.symbol
+    simbolo.href = element.source
+    simbolo.style.fontSize = '25px'
+    elemento.appendChild(simbolo) 
+    
+   
+    
+    let nome = document.createElement('p')
+    nome.innerText = element.name
+    elemento.appendChild(nome)
+    contenitore.appendChild(elemento)    
+}
 
-let elemento = document.createElement('div')
-elemento.style.borderStyle = 'solid'
-elemento.style.width = '70px'
-elemento.style.textAlign = 'center'
-elemento.style.position = 'absolute'
-elemento.style.left = '500px'
-elemento.style.top = '500px'
-
-let numeroAtomico = document.createElement('p')
-numeroAtomico.innerText = 1
-elemento.appendChild(numeroAtomico)
-
-let simbolo = document.createElement('a')
-simbolo.innerText = 'H'
-simbolo.href = 'https://it.wikipedia.org/wiki/Idrogeno'
-simbolo.style.fontSize = '25px'
-elemento.appendChild(simbolo)
-
-let nome = document.createElement('p')
-nome.innerText = 'idrogeno'
-elemento.appendChild(nome)
-contenitore.appendChild(elemento)
